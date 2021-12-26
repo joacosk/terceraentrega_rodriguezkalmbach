@@ -1,0 +1,303 @@
+@import "variables";
+@import "tipografia";
+@import "animaciones";
+@import "footer";
+@import "formulario";
+@import "galeriaPublis";
+
+
+// BANNER
+.banner {
+    height: 100vh;
+    max-width: 50vw;
+	margin: 0 20%;
+	display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+    h1 {    
+        font-family: map-get($map: $fontFamily, $key: titulo );
+        text-align: center;
+        margin: 0px ;
+        color: #ffffff;
+        font-size: 80px;
+        letter-spacing: 5px;
+        top: 50%;
+        justify-self: center;
+        align-self: center;
+        visibility: hidden;    
+           
+        text-shadow: -1px -1px 0px #468AA5,
+          3px 3px 0px #468AA5,
+          6px 6px 0px #DE849E;
+
+
+          #w1{
+                animation: fadeIn;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in;
+                animation-duration: $tiempo-anim;
+                animation-delay: $tiempo-delay;
+                animation-fill-mode: forwards;            }
+            #w2{
+                animation: fadeIn;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in;
+                animation-duration: $tiempo-anim;
+                animation-delay: $tiempo-delay*2;
+                animation-fill-mode: forwards;
+            }
+            #w3{
+                animation: fadeIn;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in;
+                animation-duration: $tiempo-anim;
+                animation-delay: $tiempo-delay*3;
+                animation-fill-mode: forwards;
+            }
+            #w4{
+                animation: fadeIn;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in;
+                animation-duration: $tiempo-anim;
+                animation-delay: $tiempo-delay*4;
+                animation-fill-mode: forwards;
+            }
+            #w5{
+                animation: fadeIn;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in;
+                animation-duration: $tiempo-anim;
+                animation-delay: $tiempo-delay*5;
+                animation-fill-mode: forwards;
+            }
+            #w6{
+                animation: fadeIn;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in;
+                animation-duration: $tiempo-anim;
+                animation-delay: $tiempo-delay*6;
+                animation-fill-mode: forwards;
+            }
+
+            
+            @media screen and (min-width: $bp-large){
+                margin-right: 29%;
+                margin-left: 20%;
+            }
+        
+
+        
+
+        @media screen and (min-width: $bp-med){
+            font-size: 150px;
+            letter-spacing: 10px;
+            
+            text-shadow: -2px -2px 0px #468AA5,
+            6px 6px 0px #468AA5,
+            12px 12px 0px #DE849E;
+  
+        }
+    }
+
+    h2{
+        font-family: map-get($map: $fontFamily, $key: special );
+        color: white;
+        font-size: 20px;
+        letter-spacing: 2px;
+        justify-self: center;
+        align-self: center;  
+        justify-self: center;
+        align-self: center;  
+        visibility: hidden; 
+
+        animation: fadeIn;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: $tiempo-anim*1.5;
+        animation-delay: $tiempo-delay*7;
+        animation-fill-mode: forwards;  
+        
+        
+        
+
+        @media screen and (min-width: $bp-med){
+            font-size: 35px;
+            letter-spacing: 4px;
+
+        }
+        @media screen and (min-width: $bp-large){
+            font-size: 60px;
+            letter-spacing: 4px;
+
+        }
+    }
+
+    .arrow,
+    .arrow::before{
+        position: absolute;     
+        left: 50%;
+        transform: scale(0);
+        transition: transform .4s;
+
+    }
+
+    .arrow{
+        width: 40px;
+        height: 40px;
+        top: 80%;
+        margin: -20px 0 0 -20px;
+        -webkit-transform: rotate(45deg);
+        border-left: none;
+        border-top: none;
+        border-right: 2px #fff solid;
+        border-bottom: 2px #fff solid;
+
+    }
+  
+    .arrow:before{
+        content: '';
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        margin: -10px 0 0 -10px;
+        border-left: none;
+        border-top: none;
+        border-right: 1px #fff solid;
+        border-bottom: 1px #fff solid;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-name: arrow;
+    }
+        
+}
+
+// Links navegacion 
+a {
+    font-family: map-get($map: $fontFamily, $key: titulo );
+    list-style: none;
+    font-size: 1em;
+    color: whitesmoke;
+    margin: 0.4vw;
+    padding: 0.4vw;
+
+    @media screen and (min-width:768px) {
+        font-size: 1.5em;
+    }
+    @media screen and (min-width:1200px) {
+        font-size: 3em;
+    }
+  }
+
+  .trilce_name {
+    font-family: map-get($map: $fontFamily, $key: special );
+    font-stretch: semi-expanded;
+    font-size: 17px;
+    
+    @media screen and (min-width:768px){
+        font-size: 22px;
+    }
+    @media screen and (min-width:1200px){
+        font-size: 35px;
+        
+    }
+
+  }
+
+
+body { 
+    max-width: auto;
+    overflow:auto;
+    font-family: map-get($map: $fontFamily, $key: text );
+	background: #468AA5;
+    background-image: url("/assets/aside_espada_normal.png");
+    background-position: -535px -150px;
+    background-size: 600vw;
+    background-repeat: no-repeat;
+    //background-position-y: 45%;
+    //background-size: auto;
+    //background-repeat: no-repeat;
+    
+    main{
+        display: flex;
+        position: relative;
+        direction: row;
+        justify-content: center;
+        width: auto;
+        margin: 20vh 10vw;
+
+        .descripcion{
+            border: 1px transparent;
+            border-radius: 0.3rem;
+            padding: 5vh 10vw;
+            background-color: rgba(250,250,250,0.5);
+            
+            .descripcion__titulo{
+                display: flex;
+                justify-content: center;
+                h3{
+                    font-size: 18px;
+                    @media screen and (min-width: $bp-small-2){
+                        font-size: 20px;
+                    }
+                    
+                    @media screen and (min-width: $bp-med){
+                        font-size: 30px;
+                        line-height: 40px ;
+                    }
+                
+                    @media screen and (min-width: $bp-large){
+                        font-size: 60px;
+                        margin: 0 0vw;
+                    }
+
+                }
+            }
+            .descripcion_texto{
+                margin-top: 5vh;
+                max-width: 30vw;
+
+
+                p{
+                    text-align: justify;
+                    font-size: 16px;
+
+                    @media screen and (min-width: $bp-small-2){
+                        font-size: 18px;
+                    }
+                    
+                    @media screen and (min-width: $bp-med){
+                        font-size: 20px;
+                        line-height: 40px ;
+                    }
+                
+                    @media screen and (min-width: $bp-large){
+                        font-size: 32px;
+                        margin: 0 0vw;
+                        line-height: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+
+    
+    @media screen and (min-width: $bp-small-2){
+        background-size: 500vw;
+        background-position: -550px;
+        background-image: 300% top;
+    }
+    
+    @media screen and (min-width: $bp-med){
+        background-position: -1000px -350px;
+    }
+
+    @media screen and (min-width: $bp-large){
+        background-size: 100vw;
+        background-position: 0 10px;
+    }
+
+
+
+}

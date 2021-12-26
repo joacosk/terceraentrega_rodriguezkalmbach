@@ -1,0 +1,119 @@
+
+// Declaramos nuestro mapa con los valores de las 4 redes que queremos usar
+$redes: (
+	twitter: #51aff8,
+	facebook: #2956a3,
+	//linkedin: #0076b8,
+	instagram: #B63184
+);
+
+@each $red, $color in $redes {
+    .red--#{$red} {
+        background: #4b4c4d;
+        &:hover {
+            background: $color;
+            .red__nombre {
+                color: $color;
+            }
+        }
+    }
+}
+
+
+.footer{
+    padding: 40px ;
+    background-color: #fff;
+    
+    .social{
+        text-align: center;
+        padding-bottom: 25px;
+        color: #4b4c4d;
+
+        a{
+            font-size: 20px;
+            color:inherit;
+            line-height: 38px;
+            display: inline-block;
+            align-items: center;
+            margin: 0 8px;
+            opacity: 0.75;
+            transition: .5s ease;
+            
+            &:hover{
+                opacity: 0.9;
+                transform: scale(1.3,1.3);
+
+            }
+
+            @media screen and (min-width: $bp-small-2){
+                font-size: 20px;
+            }
+            
+            @media screen and (min-width: $bp-med){
+                font-size: 29px;
+            }
+        
+            @media screen and (min-width: $bp-large){
+                font-size: 55px;
+            }
+        }
+    }
+
+    ul{
+        display: grid;
+        grid-template-areas: 
+        "inicio  conocenos  publi "
+        " eventos contacto .";
+        grid-template-rows: 1fr;
+        grid-template-columns: 0.5fr 0.5fr 0.5fr ;
+        list-style: none;
+        line-height: 1.6;
+
+        #list_nav1{
+            grid-area: inicio;
+        }
+        #list_nav2{
+            grid-area: conocenos;
+        }
+        #list_nav3{
+            grid-area: publi;
+        }
+        #list_nav4{
+            grid-area: eventos;
+        }
+        #list_nav5{
+            grid-area: contacto;
+        }
+
+        @media screen and (min-width: $bp-small-2){
+            font-size: 14px;
+        }
+        
+        @media screen and (min-width: $bp-med){
+            font-size: 14px;
+        }
+    
+        @media screen and (min-width: $bp-large){
+            grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+            "inicio  conocenos  publi  eventos contacto";
+            font-size: 15px;
+        }
+
+        li{
+            
+            a{
+                color: inherit;
+                text-decoration: none;
+                opacity: 0.8;
+
+                &:hover{
+                    opacity: 1;
+                }
+            }
+
+        }
+    }          
+}
+

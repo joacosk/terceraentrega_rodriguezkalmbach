@@ -1,0 +1,26 @@
+@font-face {
+    font-family: Andralis;
+    font-weight: regular;
+    src: url("../assets/Tipografías/Andralis_ND/Andralis_ND_OsF_Regular.otf") format("opentype");
+  }
+  @font-face {
+    font-family: HKGrotesk;
+    font-weight: regular;
+    src: url("../assets/Tipografías/Hk_Grotesk/HKGrotesk-Regular.otf") format("opentype");
+  }
+  @font-face {
+    font-family: Nagoda;
+    font-weight: regular;
+    src: url("../assets/Tipografías/Nagoda/Nagoda.otf") format("opentype");
+  }
+
+
+$font-footer-family: Andralis;
+$font-text-family: HKGrotesk;
+$font-special-family: Nagoda;
+
+$fontFamily: (
+  titulo: Andralis,
+  text: HKGrotesk,
+  special: Nagoda,
+)

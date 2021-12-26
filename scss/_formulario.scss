@@ -1,0 +1,232 @@
+// Variables
+$ruta: '../assets/icon';
+$social:
+'instagram',
+'facebook';
+$fondo-formulario: rgba(0,0,0, 0.3);
+$tipografia: HKGrotesk;
+$font-size: 20px;
+
+// MIXIN CON PARAMETROS
+
+@mixin formulario ($m:0,$p:0,$b:0,$ba:border,$ma:margin,$pa:padding){
+    #{$ma}: $m;
+    #{$ba}: $b;
+    #{$pa}: $p;
+}
+
+
+//NESTING
+.main-contacto{
+    height: auto;
+    background-image: url(/assets/img/oficiodeenamorarse.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: -150%;
+    border-radius: 2rem;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+    
+   
+    
+    .grid_img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        visibility: hidden;
+
+    }
+    @media screen and (min-width: $bp-large){
+        background-image: none;
+        display: grid;
+        grid-template-columns: 1.5fr 0.75fr 1.5fr;
+        gap: 0.2rem;
+
+        .grid_img{
+            visibility: visible;
+        }
+    }
+    
+    #formSection{
+
+        @include formulario($p: 0 );
+
+        h2{
+            font-family: map-get($map: $fontFamily, $key: titulo );
+            text-align: center;
+            color: $font-footer-color;
+        }
+
+        #contact{
+            font-family: map-get($map: $fontFamily, $key: titulo );
+            width: auto;
+            background-color: $fondo-formulario;
+            @include formulario(auto auto, .25rem, border-radius,);
+            display: grid;
+            input,
+            textarea{
+                width: auto;
+                height: 100%;
+                @include formulario(5% 0%, 2% 2%, 1px solid transparent, $ma:outline,);
+            }
+
+            label{
+                font-family: $font-footer-family;
+                text-align: center;
+                color: $font-footer-color;
+                padding: 2%;
+            }
+
+            @media screen and (min-width: $bp-small-2){
+                font-size: $font-footer-size-sm;
+            }
+            
+            @media screen and (min-width: $bp-med){
+                font-size: $font-footer-size-m;
+
+                    }
+        
+            @media screen and (min-width: $bp-large){
+                font-size: $font-footer-size-l;            
+            }
+
+        }
+        .social{
+            background-color: rgba(250,250,250 ,0.8);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            margin-bottom: 5%;
+
+            h3{
+                font-family: map-get($map: $fontFamily, $key: titulo );
+                color: $font-boton-color;
+                font-size: $font-footer-size-sm;
+                text-align: center;
+                margin: 5% 5%;
+            }
+            @media screen and (min-width: $bp-small-2){
+                font-size: $font-footer-size-sm;
+            }
+            
+            @media screen and (min-width: $bp-med){
+                font-size: $font-footer-size-m;
+
+                    }
+        
+            @media screen and (min-width: $bp-large){
+                grid-template-columns: 1fr 0.25fr 0.25fr;
+                text-align: center;
+                align-content: center;
+                margin-right: 10%;
+                padding: 0 5%;
+                
+                h3{
+                    font-size: $font-footer-size-l;
+                    width: 25%;
+                }
+            }
+
+        }
+
+
+
+        // MIXING SIN PARAMETROS
+
+        @mixin crearBordes{
+            border:1px solid transparent;
+            border-radius: 10px;
+            background-color: $fondo-formulario;
+        }
+
+        .copy{
+            @include crearBordes();
+            text-align: center;
+            color: $font-footer-color;
+
+        }
+
+        //EXTEND 
+        .botonera{
+            width: auto;
+            margin: 10px 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .boton{
+            font-family: map-get($map: $fontFamily, $key: titulo );
+            color: $font-boton-color;
+
+            margin: 0 10px;    
+            width: 100%;
+            height: auto;
+            background-color: rgba(250,250,250 ,0.3);
+            border-radius: 20px;
+            border: 1px solid transparent; 
+            &:hover{
+                background-color: rgba(250,250,250 ,0.8);
+                box-shadow: 3px 3px ;
+                
+            }
+
+            @media screen and (min-width: $bp-small-2){
+                font-size: $font-footer-size-sm;
+            }
+            
+            @media screen and (min-width: $bp-med){
+                font-size: $font-footer-size-m;
+
+                    }
+        
+            @media screen and (min-width: $bp-large){
+                font-size: $font-footer-size-l;
+            
+            }
+        }
+
+        .boton--limpiar{
+            @extend .boton;
+        }
+
+        .boton--volver{
+            @extend .boton;
+        }
+
+                font-size: $font-footer-size-m;
+        
+
+
+    }
+
+    // ICONOS REDES
+    @each $icon in $social{
+        .#{$icon}{
+            background-image: url("#{$ruta}/#{$icon}.svg");
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            transition: .5s ease;
+            
+            &:hover{
+                transform: scale(1.3,1.3);
+            }
+            @media screen and (min-width: $bp-small-2){
+                width: 40px;
+                height: 40px;
+            }
+            
+            @media screen and (min-width: $bp-med){
+                width: 60px;
+                height: 60px;
+                    }
+        
+            @media screen and (min-width: $bp-large){
+                width: 80px;
+                height: 80px;
+                    }
+        
+        }
+    }
+}
