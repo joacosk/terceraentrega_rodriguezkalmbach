@@ -1,17 +1,15 @@
 // BreakPoints
 $bp-small: 320px;
-$bp-small-2: 480px;
+// $bp-small-2: 480px;
 $bp-med-s: 600px;
-$bp-med: 768px;
-$bp-large: 1024px;
+// $bp-med: 768px;
+// $bp-large: 1024px;
 $bp-xl: 1200px;
 
 // Variables footer
 $font-footer-color: rgb(229,228,228);
 $font-footer-family: Andralis;
-$font-footer-size-sm: 14px;
-$font-footer-size-m: 16px;
-$font-footer-size-l: 18px;
+
 
 // Botones
 $font-boton-color: rgb(0,30,30);
@@ -20,3 +18,35 @@ $font-boton-color: rgb(0,30,30);
 $tiempo-anim: 1s;
 $tiempo-delay: 1.2s;
 
+// ---------------- TIPOGRAFIA ---------------- 
+
+// Familias
+$font-footer-family: Andralis;
+$font-text-family: HKGrotesk;
+$font-special-family: Nagoda;
+
+$fontFamily: (
+  titulo: Andralis,
+  text: HKGrotesk,
+  special: Nagoda,
+);
+
+// Tamaños letras footer
+$font-footer-size-sm: 0.4rem;
+$font-footer-size-m: 0.5rem;
+$font-footer-size-l: 0.6rem;
+
+// Tamaños letras Botones
+$font-size-boton-sm: 1.563rem;
+$font-size-boton-ms: 1.7rem;
+$font-size-boton-xl: 0.1rem;
+
+// Tamaños títulos
+$font-titulo-size-sm: 1.8rem;
+$font-titulo-size-m: 2rem;
+$font-titulo-size-l: 20rem;
+
+// Tamaños parrafos
+$font-texto-size-s:1rem;
+$font-texto-size-m:1.2rem;
+$font-texto-size-l:1.4rem;

@@ -1,192 +1,26 @@
 @import "variables";
 @import "tipografia";
 @import "animaciones";
+@import "banners";
 @import "footer";
 @import "formulario";
 @import "galeriaPublis";
 
 
-// BANNER
-.banner {
-    height: 100vh;
-    max-width: 50vw;
-	margin: 0 20%;
-	display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-
-    h1 {    
-        font-family: map-get($map: $fontFamily, $key: titulo );
-        text-align: center;
-        margin: 0px ;
-        color: #ffffff;
-        font-size: 80px;
-        letter-spacing: 5px;
-        top: 50%;
-        justify-self: center;
-        align-self: center;
-        visibility: hidden;    
-           
-        text-shadow: -1px -1px 0px #468AA5,
-          3px 3px 0px #468AA5,
-          6px 6px 0px #DE849E;
-
-
-          #w1{
-                animation: fadeIn;
-                animation-iteration-count: 1;
-                animation-timing-function: ease-in;
-                animation-duration: $tiempo-anim;
-                animation-delay: $tiempo-delay;
-                animation-fill-mode: forwards;            }
-            #w2{
-                animation: fadeIn;
-                animation-iteration-count: 1;
-                animation-timing-function: ease-in;
-                animation-duration: $tiempo-anim;
-                animation-delay: $tiempo-delay*2;
-                animation-fill-mode: forwards;
-            }
-            #w3{
-                animation: fadeIn;
-                animation-iteration-count: 1;
-                animation-timing-function: ease-in;
-                animation-duration: $tiempo-anim;
-                animation-delay: $tiempo-delay*3;
-                animation-fill-mode: forwards;
-            }
-            #w4{
-                animation: fadeIn;
-                animation-iteration-count: 1;
-                animation-timing-function: ease-in;
-                animation-duration: $tiempo-anim;
-                animation-delay: $tiempo-delay*4;
-                animation-fill-mode: forwards;
-            }
-            #w5{
-                animation: fadeIn;
-                animation-iteration-count: 1;
-                animation-timing-function: ease-in;
-                animation-duration: $tiempo-anim;
-                animation-delay: $tiempo-delay*5;
-                animation-fill-mode: forwards;
-            }
-            #w6{
-                animation: fadeIn;
-                animation-iteration-count: 1;
-                animation-timing-function: ease-in;
-                animation-duration: $tiempo-anim;
-                animation-delay: $tiempo-delay*6;
-                animation-fill-mode: forwards;
-            }
-
-            
-            @media screen and (min-width: $bp-large){
-                margin-right: 29%;
-                margin-left: 20%;
-            }
-        
-
-        
-
-        @media screen and (min-width: $bp-med){
-            font-size: 150px;
-            letter-spacing: 10px;
-            
-            text-shadow: -2px -2px 0px #468AA5,
-            6px 6px 0px #468AA5,
-            12px 12px 0px #DE849E;
-  
-        }
-    }
-
-    h2{
-        font-family: map-get($map: $fontFamily, $key: special );
-        color: white;
-        font-size: 20px;
-        letter-spacing: 2px;
-        justify-self: center;
-        align-self: center;  
-        justify-self: center;
-        align-self: center;  
-        visibility: hidden; 
-
-        animation: fadeIn;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-in;
-        animation-duration: $tiempo-anim*1.5;
-        animation-delay: $tiempo-delay*7;
-        animation-fill-mode: forwards;  
-        
-        
-        
-
-        @media screen and (min-width: $bp-med){
-            font-size: 35px;
-            letter-spacing: 4px;
-
-        }
-        @media screen and (min-width: $bp-large){
-            font-size: 60px;
-            letter-spacing: 4px;
-
-        }
-    }
-
-    .arrow,
-    .arrow::before{
-        position: absolute;     
-        left: 50%;
-        transform: scale(0);
-        transition: transform .4s;
-
-    }
-
-    .arrow{
-        width: 40px;
-        height: 40px;
-        top: 80%;
-        margin: -20px 0 0 -20px;
-        -webkit-transform: rotate(45deg);
-        border-left: none;
-        border-top: none;
-        border-right: 2px #fff solid;
-        border-bottom: 2px #fff solid;
-
-    }
-  
-    .arrow:before{
-        content: '';
-        width: 20px;
-        height: 20px;
-        top: 50%;
-        margin: -10px 0 0 -10px;
-        border-left: none;
-        border-top: none;
-        border-right: 1px #fff solid;
-        border-bottom: 1px #fff solid;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-        animation-name: arrow;
-    }
-        
-}
-
 // Links navegacion 
 a {
     font-family: map-get($map: $fontFamily, $key: titulo );
     list-style: none;
-    font-size: 1em;
+    font-size: 1rem;
     color: whitesmoke;
     margin: 0.4vw;
     padding: 0.4vw;
 
     @media screen and (min-width:768px) {
-        font-size: 1.5em;
+        font-size: 1.5rem;
     }
     @media screen and (min-width:1200px) {
-        font-size: 3em;
+        font-size: 3rem;
     }
   }
 
@@ -210,90 +44,161 @@ body {
     max-width: auto;
     overflow:auto;
     font-family: map-get($map: $fontFamily, $key: text );
-	background: #468AA5;
-    background-image: url("/assets/aside_espada_normal.png");
-    background-position: -535px -150px;
-    background-size: 600vw;
-    background-repeat: no-repeat;
+
     //background-position-y: 45%;
     //background-size: auto;
     //background-repeat: no-repeat;
-    
-    main{
-        display: flex;
-        position: relative;
-        direction: row;
-        justify-content: center;
-        width: auto;
-        margin: 20vh 10vw;
 
-        .descripcion{
+
+    // ------------------ Primer Seccion -----------------   
+    main{
+        
+        display: flexbox;
+        position: relative;
+        direction: column;
+        justify-content: center;
+        width: 100vw;
+        margin: 0vh 0vw;
+
+        .primerSeccion{
+            font-size: 0.191em;
             border: 1px transparent;
             border-radius: 0.3rem;
             padding: 5vh 10vw;
             background-color: rgba(250,250,250,0.5);
             
-            .descripcion__titulo{
+            .primerSeccion__titulo{
                 display: flex;
                 justify-content: center;
                 h3{
-                    font-size: 18px;
-                    @media screen and (min-width: $bp-small-2){
-                        font-size: 20px;
-                    }
+                    font-family: map-get($map: $fontFamily, $key:titulo );
+                    font-size: $font-titulo-size-sm;
+
                     
-                    @media screen and (min-width: $bp-med){
-                        font-size: 30px;
+                    @media screen and (min-width: $bp-med-s){
+                        font-size: $font-titulo-size-m;
                         line-height: 40px ;
                     }
                 
-                    @media screen and (min-width: $bp-large){
-                        font-size: 60px;
+                    @media screen and (min-width: $bp-xl){
+                        font-size: $font-titulo-size-l;
                         margin: 0 0vw;
                     }
 
                 }
             }
-            .descripcion_texto{
+
+
+            .primerSeccion_texto{
                 margin-top: 5vh;
-                max-width: 30vw;
+                max-width: 90vw;
 
 
                 p{
+                    font-family: map-get($map: $fontFamily, $key: text );
                     text-align: justify;
-                    font-size: 16px;
+                    font-size: 6em;
 
-                    @media screen and (min-width: $bp-small-2){
-                        font-size: 18px;
-                    }
+
                     
-                    @media screen and (min-width: $bp-med){
-                        font-size: 20px;
+                    @media screen and (min-width: $bp-med-s){
+                        font-size: $font-texto-size-m;
                         line-height: 40px ;
                     }
                 
-                    @media screen and (min-width: $bp-large){
-                        font-size: 32px;
+                    @media screen and (min-width: $bp-xl){
+                        font-size: $font-texto-size-l;
                         margin: 0 0vw;
                         line-height: 1.5em;
                     }
                 }
             }
         }
+
+    // ------------------ Segunda Seccion ------------------
+
+        .segundaSeccion{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            height: auto;
+            margin: 0px 0px;
+
+            .segundaSeccion__categoria{
+                margin:2px 2px;
+                width: 100%;
+                position: relative;
+                text-align: center;
+                overflow: hidden;
+                height: auto;
+                font-size: 0;
+
+                @media screen and (min-width: $bp-med-s){
+                    width: 45%;
+                    margin: 2px 2px;
+                }
+
+                
+                
+            }
+
+            img{
+                transition: all 1s;
+                width: 100%;
+                overflow: hidden;
+            }
+
+
+            // ---- En este punto no pude colocar efecto hover sobre los botones ----
+            .categoria__boton{
+                color: white;
+                position: absolute;
+                border: solid 0.1rem white;
+                padding: 0.2rem 1rem;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-family: map-get($map: $fontFamily, $key: titulo );
+                font-size: 1.563rem;
+                letter-spacing: 2px;
+                cursor:pointer;
+                background-color: rgb(0,0,0,0.7);
+                backdrop-filter: blur(10px);
+                               
+                a{
+                    text-decoration: none;
+                    transition: .5s ease;
+                    &:hover{
+                        transform: scale(1.8,1.8);
+                        font-size: 1.2;
+                        
+                    }
+                }          
+            }
+            
+            @media screen and (min-width: $bp-med-s){
+                font-size: $font-size-boton-ms;
+                flex-direction: row;
+                margin: 5px 0px;
+
+            }
+            
+            @media screen and (min-width: $bp-xl){
+                font-size: $font-size-boton-xl;
+            }
+        }
     }
 
+
     
-    @media screen and (min-width: $bp-small-2){
-        background-size: 500vw;
-        background-position: -550px;
-        background-image: 300% top;
-    }
-    
-    @media screen and (min-width: $bp-med){
+    @media screen and (min-width: $bp-med-s){
         background-position: -1000px -350px;
     }
 
-    @media screen and (min-width: $bp-large){
+    @media screen and (min-width: $bp-xl){
         background-size: 100vw;
         background-position: 0 10px;
     }

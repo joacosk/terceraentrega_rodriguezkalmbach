@@ -21,99 +21,108 @@ $redes: (
 
 
 .footer{
-    padding: 40px ;
-    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(26,63,79);
+
+    .footerLogo{
+        color: whitesmoke;
+    }
     
-    .social{
+    // -------------- Links Navegacion entre páginas --------------
+    .listPaginas{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(2,1fr) ;
+        list-style: none;
+        line-height: 1.6;
+        text-decoration: none;
         text-align: center;
-        padding-bottom: 25px;
-        color: #4b4c4d;
+        font-family: map-get($map: $fontFamily, $key: text );
+        font-size: $font-footer-size-sm;
+        .listPaginas__titulo{
+            grid-column: 1/3;
+            color: whitesmoke;
+            
+            @media screen and (min-width: $bp-med-s){
+                font-size: $font-footer-size-m;
+            }
+            
+            @media screen and (min-width: $bp-xl){
+                font-size: $font-footer-size-l;
+            }   
+        }
+        #contactoNav{
+            grid-column: 1/3;
+        }
+
+        @media screen and (min-width: $bp-med-s){
+            font-size: $font-footer-size-m;
+        }
+        
+        @media screen and (min-width: $bp-xl){
+            font-size: $font-footer-size-l;
+        }   
 
         a{
-            font-size: 20px;
+            color: whitesmoke;
+            text-decoration: none;
+            opacity: 0.3;
+            transition: .5s ease;
+
+            &:hover{
+                opacity: 1;
+                transform: scale(1.3,1.3);
+            }
+        }
+
+    
+    }      
+
+    // -------------- Links REDES SOCIALES --------------
+    .social{
+        text-align: center;
+        padding-top: 1.5em;
+        color: whitesmoke;
+
+
+        a{
+            font-size: 1em;
             color:inherit;
-            line-height: 38px;
+            line-height: 1.3em;
             display: inline-block;
             align-items: center;
             margin: 0 8px;
-            opacity: 0.75;
-            transition: .5s ease;
-            
+            opacity: 0.9;
+
             &:hover{
                 opacity: 0.9;
-                transform: scale(1.3,1.3);
+                transform: scale(1.3,1.3);}
 
-            }
 
-            @media screen and (min-width: $bp-small-2){
+            /*@media screen and (min-width: $bp-small-2){
                 font-size: 20px;
-            }
+            }*/
             
-            @media screen and (min-width: $bp-med){
+            @media screen and (min-width: $bp-med-s){
                 font-size: 29px;
             }
         
-            @media screen and (min-width: $bp-large){
+            @media screen and (min-width: $bp-xl){
                 font-size: 55px;
             }
         }
     }
 
-    ul{
-        display: grid;
-        grid-template-areas: 
-        "inicio  conocenos  publi "
-        " eventos contacto .";
-        grid-template-rows: 1fr;
-        grid-template-columns: 0.5fr 0.5fr 0.5fr ;
-        list-style: none;
-        line-height: 1.6;
+    @media screen and (min-width: $bp-med-s){
+        flex-direction: row;    
+    }
 
-        #list_nav1{
-            grid-area: inicio;
-        }
-        #list_nav2{
-            grid-area: conocenos;
-        }
-        #list_nav3{
-            grid-area: publi;
-        }
-        #list_nav4{
-            grid-area: eventos;
-        }
-        #list_nav5{
-            grid-area: contacto;
-        }
-
-        @media screen and (min-width: $bp-small-2){
-            font-size: 14px;
-        }
-        
-        @media screen and (min-width: $bp-med){
-            font-size: 14px;
-        }
-    
-        @media screen and (min-width: $bp-large){
-            grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
-            grid-template-rows: 1fr;
-            grid-template-areas: 
-            "inicio  conocenos  publi  eventos contacto";
-            font-size: 15px;
-        }
-
-        li{
-            
-            a{
-                color: inherit;
-                text-decoration: none;
-                opacity: 0.8;
-
-                &:hover{
-                    opacity: 1;
-                }
-            }
-
-        }
-    }          
+    @media screen and (min-width: $bp-xl){
+        flex-direction: row;    
+    }
 }
 
