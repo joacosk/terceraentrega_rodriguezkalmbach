@@ -32,21 +32,40 @@ $fontFamily: (
 );
 
 // Tamaños letras footer
-$font-footer-size-sm: 0.4rem;
-$font-footer-size-m: 0.5rem;
-$font-footer-size-l: 0.6rem;
+$font-footer-size-sm: 1rem;
+$font-footer-size-m: 1.2rem;
+$font-footer-size-l: 1.4rem;
 
 // Tamaños letras Botones
 $font-size-boton-sm: 1.563rem;
 $font-size-boton-ms: 1.7rem;
-$font-size-boton-xl: 0.1rem;
+$font-size-boton-xl: 1.8rem;
 
 // Tamaños títulos
 $font-titulo-size-sm: 1.8rem;
 $font-titulo-size-m: 2rem;
-$font-titulo-size-l: 20rem;
+$font-titulo-size-l: 2.2rem;
 
 // Tamaños parrafos
 $font-texto-size-s:1rem;
 $font-texto-size-m:1.2rem;
 $font-texto-size-l:1.4rem;
+
+
+// Tamaños links
+// Nav header
+$font-NavHeader-size-sm: 1rem;
+$font-NavHeader-size-m: 1.2rem;
+$font-NavHeader-size-l: 1.4rem;
+
+
+// Nav footer
+$font-NavFooter-size-sm: 1rem;
+$font-NavFooter-size-m: 1.2rem;
+$font-NavFooter-size-l: 1.4rem;
+
+
+// ------------------- COLORES -------------------
+$color-bg-banner1:#468AA5;
+$color-bg-footer: rgb(26,63,79);
+$color-bg-footer-rgb: 26,63,79;

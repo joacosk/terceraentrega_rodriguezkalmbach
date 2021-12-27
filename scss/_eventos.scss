@@ -1,0 +1,71 @@
+
+
+main{
+    h1{
+        font-family: map-get($map: $fontFamily, $key: titulo );
+        text-align:center;
+    
+    }
+
+    h2, 
+    h3{
+        font-family: map-get($map: $fontFamily, $key: special );
+        text-align:center;
+    }
+    .eventos{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+
+        @media screen and (min-width: $bp-med-s){
+        }
+        
+                        
+        @media screen and (min-width: $bp-xl){
+            
+        }
+        .eventos_descripcion{
+
+            width: 100vw;
+            .barra {
+            content: '';
+            background-color: rgb(26,63,79);
+            width: 100%;
+            height: 2.5px;
+            border-radius: 1000px;
+            margin-bottom: 20px;
+            }
+        }
+
+        .eventos__tarjeta{
+            display: flex;
+            flex-direction: column;
+            width: 25rem;
+            border: solid white 1px;
+            border-radius: 0.3rem;
+            background-color: #468AA5;
+            align-items: center;
+            margin: 0.5rem 0;
+            padding: 1rem 0;
+
+            .tarjeta__fecha{
+                margin-top: 0.5rem;
+            }
+            img{
+               width: 60% ;
+               height: auto;
+               box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+            }
+
+            .tarjeta__titulo{
+                width: 60%;
+            }
+        }
+
+    }
+}

@@ -5,6 +5,7 @@
 @import "footer";
 @import "formulario";
 @import "galeriaPublis";
+@import "eventos";
 
 
 // Links navegacion 
@@ -52,65 +53,98 @@ body {
 
     // ------------------ Primer Seccion -----------------   
     main{
-        
         display: flexbox;
         position: relative;
         direction: column;
         justify-content: center;
-        width: 100vw;
+        width: 100%;
         margin: 0vh 0vw;
 
         .primerSeccion{
+        /*    background-image: url("/assets/img/Fondo_main_compu4.jpg");
+            background-position: center;
+            background-position-y: -5vh ;
+            background-size:  cover;
+            background-repeat: no-repeat;*/
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin: 1vh 0vw;       
             font-size: 0.191em;
             border: 1px transparent;
             border-radius: 0.3rem;
-            padding: 5vh 10vw;
+            padding: 5vh 2vw;
             background-color: rgba(250,250,250,0.5);
+            width: 100wv;
+
+            @media screen and (min-width: $bp-med-s){
+                background-position-y: -8vh ;
+                margin: 5vh 0vw;
+                width: 100vw;
+                min-height: 75vh;
+            }
             
+                            
+            @media screen and (min-width: $bp-xl){
+                background-size: 150vw;
+                background-position-y: -15vh ;
+                
+
+            }
+
+
             .primerSeccion__titulo{
                 display: flex;
                 justify-content: center;
+                margin-top: 12vh;
+                
                 h3{
-                    font-family: map-get($map: $fontFamily, $key:titulo );
+                    font-family: map-get($map: $fontFamily, $key:special );
                     font-size: $font-titulo-size-sm;
 
                     
                     @media screen and (min-width: $bp-med-s){
                         font-size: $font-titulo-size-m;
-                        line-height: 40px ;
+                        line-height: 1rem ;
+                        max-width: 60vw;
                     }
                 
                     @media screen and (min-width: $bp-xl){
                         font-size: $font-titulo-size-l;
                         margin: 0 0vw;
                     }
-
                 }
             }
 
 
             .primerSeccion_texto{
-                margin-top: 5vh;
-                max-width: 90vw;
-
+                margin-top: 6vh;
+                
+                max-width: 100%;
+                display: flex;
+                justify-content: center;
 
                 p{
                     font-family: map-get($map: $fontFamily, $key: text );
                     text-align: justify;
                     font-size: 6em;
-
-
-                    
+                    line-height: 1.5em;
+                                        
                     @media screen and (min-width: $bp-med-s){
                         font-size: $font-texto-size-m;
-                        line-height: 40px ;
+                        line-height: 1.8rem ;
+                        max-width: 40vw;
                     }
                 
                     @media screen and (min-width: $bp-xl){
                         font-size: $font-texto-size-l;
-                        margin: 0 0vw;
-                        line-height: 1.5em;
+                        line-height: 2em;
                     }
+                }
+                
+                @media screen and (min-width: $bp-med-s){
+                    margin-bottom: 4vh;
+
                 }
             }
         }
@@ -205,4 +239,30 @@ body {
 
 
 
+}
+
+/* change the background color */
+.navbar-custom {
+    background-color: #ff5500;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:focus .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+.navbar-light .nav-item.active .nav-link,
+.navbar-light .nav-item:focus .nav-link,
+.navbar-light .nav-item:hover .nav-link {
+        color: #ffffff;
 }
