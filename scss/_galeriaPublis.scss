@@ -105,49 +105,53 @@ $breakpoints: ("small": 320px, "medium": 768px, "large": 1024px) !default;
             .galeria__fot--g1{
                 @extend %tarjetaPubli;
                 &::before{
-                    content: "Descripcion tarjeta numero 1";
+                    content: "Título: Natural.\A Poesía: Santino Britez,\A Ilustración: Juan Baez Nudelman";
+                    
                 }                
             }
             .galeria__fot--g2{
                 @extend %tarjetaPubli;
                 &::before{
-                    content: "Descripcion tarjeta numero 2";
+                    content: "Título: La ira de WASD\A Poesía: Ezra O'Hash\A Capturas de pantalla:\A de World of Warcraft";
                 }                
             }
             .galeria__fot--g3{
                 @extend %tarjetaPubli;
                 &::before{
-                    content: "Descripcion tarjeta numero 3";
+                    content: "Título:\A Ex eran los de antes\A Poesía:\A Celia Pérez Campos\A Fotografía:\A Antonella Fariña";
+                    font-size: $font-texto-size-m;
                 }                
             }
             .galeria__fot--g4{
                 @extend %tarjetaPubli;
                 &::before{
-                    content: "Descripcion tarjeta numero 4";
+                    content: "Título: Luxx\A Collage digital:\A Lu Baez\A Poesía:\A Juan Baez\A Nudelman";
                 }                
             }
             .galeria__fot--g5{
                 @extend %tarjetaPubli;
                 &::before{
-                    content: "Descripcion tarjeta numero 5";
+                    content: "Título: Imaginar inmenso.\A Poesía y macro fotografía: \A Joaquín R. Kalmbach";
+                    font-size: $font-texto-size-m;
                 }                
             }
             .galeria__fot--g6{
                 @extend %tarjetaPubli;
                 &::before{
-                    content: "Descripcion tarjeta numero 6";
+                    content: "Título: Infancia Errática.\A Poesía y fotografía: Germán Lorenzo Robert";
                 }                
             }
             .galeria__fot--g7{
                 @extend %tarjetaPubli;
                 &::before{
-                    content: "Descripcion tarjeta numero 7";
+                    content: "Título: Esos lugares donde todo es más extraño\A Poesía: Belén Maldonado\A Fotografía: Aimará Schwieters";
                 }                
             }
             .galeria__fot--g8{
                 @extend %tarjetaPubli;
                 &::before{
-                    content: "Descripcion tarjeta numero 8";
+                    content: " Título: El futuro es así\A Poesía: Walter Godoy\A Capturas Google Earth";
+                    font-size: $font-texto-size-m;
                 }                
             }
 

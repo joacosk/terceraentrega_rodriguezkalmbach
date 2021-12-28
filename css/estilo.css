@@ -91,6 +91,7 @@
 }
 .bodyPubli .mainPubli .galeria .galeria__fot--g8:hover::before, .bodyPubli .mainPubli .galeria .galeria__fot--g7:hover::before, .bodyPubli .mainPubli .galeria .galeria__fot--g6:hover::before, .bodyPubli .mainPubli .galeria .galeria__fot--g5:hover::before, .bodyPubli .mainPubli .galeria .galeria__fot--g4:hover::before, .bodyPubli .mainPubli .galeria .galeria__fot--g3:hover::before, .bodyPubli .mainPubli .galeria .galeria__fot--g2:hover::before, .bodyPubli .mainPubli .galeria .galeria__fot--g1:hover::before {
   transform: scale(1);
+  white-space: pre;
 }
 
 .banner {
@@ -221,7 +222,6 @@
   height: 40px;
   top: 80%;
   margin: -20px 0 0 -20px;
-  -webkit-transform: rotate(45deg);
   border-left: none;
   border-top: none;
   border-right: 2px #fff solid;
@@ -552,28 +552,31 @@
   display: grid;
 }
 .bodyPubli .mainPubli .galeria .galeria__fot--g1::before {
-  content: "Descripcion tarjeta numero 1";
+  content: "Título: Natural.\aPoesía: Santino Britez,\aIlustración: Juan Baez Nudelman";
 }
 .bodyPubli .mainPubli .galeria .galeria__fot--g2::before {
-  content: "Descripcion tarjeta numero 2";
+  content: "Título: La ira de WASD\aPoesía: Ezra O'Hash\a Capturas de pantalla:\a de World of Warcraft";
 }
 .bodyPubli .mainPubli .galeria .galeria__fot--g3::before {
-  content: "Descripcion tarjeta numero 3";
+  content: "Título:\a Ex eran los de antes\aPoesía:\a Celia Pérez Campos\a Fotografía:\a Antonella Fariña";
+  font-size: 1.2rem;
 }
 .bodyPubli .mainPubli .galeria .galeria__fot--g4::before {
-  content: "Descripcion tarjeta numero 4";
+  content: "Título: Luxx\a Collage digital:\aLu Baez\aPoesía:\aJuan Baez\aNudelman";
 }
 .bodyPubli .mainPubli .galeria .galeria__fot--g5::before {
-  content: "Descripcion tarjeta numero 5";
+  content: "Título: Imaginar inmenso.\aPoesía y macro fotografía: \aJoaquín R. Kalmbach";
+  font-size: 1.2rem;
 }
 .bodyPubli .mainPubli .galeria .galeria__fot--g6::before {
-  content: "Descripcion tarjeta numero 6";
+  content: "Título: Infancia Errática.\aPoesía y fotografía: Germán Lorenzo Robert";
 }
 .bodyPubli .mainPubli .galeria .galeria__fot--g7::before {
-  content: "Descripcion tarjeta numero 7";
+  content: "Título: Esos lugares donde todo es más extraño\aPoesía: Belén Maldonado\a Fotografía: Aimará Schwieters";
 }
 .bodyPubli .mainPubli .galeria .galeria__fot--g8::before {
-  content: "Descripcion tarjeta numero 8";
+  content: " Título: El futuro es así\aPoesía: Walter Godoy\a Capturas Google Earth";
+  font-size: 1.2rem;
 }
 @media screen and (min-width: 1200px) {
   .bodyPubli .mainPubli .galeria {
