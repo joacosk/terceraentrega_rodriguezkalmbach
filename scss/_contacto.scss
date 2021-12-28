@@ -1,0 +1,17 @@
+
+
+.tituloContacto{
+    @extend %fondoTitulos;
+    background-image: url("../assets/img/contactanos1.jpg");
+    background-position-y: -295%;
+    margin-bottom: 15vh;
+    position: relative;
+}
+
+.main-contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10vh;
+   
+}

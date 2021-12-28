@@ -21,14 +21,16 @@
     <title>Compartí tu publicación</title></head>
     <meta name="desciption" content="“Estamos en constante desarrollo. No importa de dónde seas, te invitamos a publicar tus creaciones junto a nosotros. Solo tenés que escribirnos.”">
 
-<body>
+<body class="bodyContacto">
     <header>
         <div  class="container-fluid min">
             <div class="row ">
             <nav id= "nav" class="navbar navbar-expand-lg navbar-light bg-light " style="position:sticky; top:0;" data-mdb-toggle="animation" data-mdb-animation-reset="false" data-mdb-animation="slide-out-right" >
                 <div class="container-fluid ">
-                <a class="navbar-brand" href="#">TRILCE</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <a class="navbar-brand" href="Index.html" >
+                    <img src="/assets/logo_nav2.png" alt="logo" alt="logo" width="150" heigth=70>
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarNav">
@@ -55,13 +57,11 @@
     
             </div>
     </header>
-
+    <div class="tituloContacto">
+      <h1>Contactanos</h1>
+  </div>
     <main class = "main-contacto">
-
-      <div class="main-contacto__img1">
-        <img class="grid_img" src="/assets/img/oficiodeenamorarse.jpg" alt="">
-      </div>
-      <section id="formSection">
+<!--      <section class= "form" id="formSection">
             <form action="" id="contact">
               <h2>¿Te gustaría publicar?</h2>
               <label for="">Ingrese su nombre</label>
@@ -72,8 +72,9 @@
               
               <label for="">Ingrese su mail</label>
               <input type="text">
-      
-              <textarea name="" id="" cols="30" rows="10"></textarea>
+              
+              <label for=""></label>
+              <textarea name="" id="mensaje" cols="30" rows="10"></textarea>
       
               <div class="botonera">
                 <button class="boton">Enviar</button>
@@ -83,13 +84,53 @@
       
             </form>
       
-          </section>
+      </section>
+-->
+<div class="container">
+	<div class="row justify-content-center">
+      <div class="col-md-6  col-md-offset-3 border-1">
+        <div class="well well-sm">
+          <form class="form-horizontal " action="" method="post">
+          <fieldset>
+                <!-- Nombre input-->
+            <div class="form-group">
+              <label class="col-md-3 control-label " for="name">Nombre</label>
+              <div class="col-md-9">
+                <input id="name" name="name" type="text" placeholder="Tu nombre" class="form-control">
+              </div>
+            </div>
+    
+            <!-- Mail input-->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="email">Tu mail</label>
+              <div class="col-md-9">
+                <input id="email" name="email" type="text" placeholder="Tu correo" class="form-control">
+              </div>
+            </div>
+    
+            <!-- Mensaje body -->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="message">Tu mensaje</label>
+              <div class="col-md-9">
+                <textarea class="form-control" id="message" name="message" placeholder="Podés dejarnos tu mensaje ..." rows="5"></textarea>
+              </div>
+            </div>
+    
+            <!-- Form actions -->
+            <div class="form-group mt-1">
+              <div class="col-md-12 text-right">
+                <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+              </div>
+            </div>
+          </fieldset>
+          </form>
+        </div>
+      </div>
+	</div>
+</div>
 
-          <div class="main-contacto__img2">
-            <img class="grid_img" src="/assets/img/sombras.jpg" alt="">
-          </div>
 
-      </main>
+    </main>
 
     <!-- Inicio del FOOTER -->
     <footer class="footer">

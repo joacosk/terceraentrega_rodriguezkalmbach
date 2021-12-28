@@ -69,3 +69,47 @@ $font-NavFooter-size-l: 1.4rem;
 $color-bg-banner1:#468AA5;
 $color-bg-footer: rgb(26,63,79);
 $color-bg-footer-rgb: 26,63,79;
+
+
+// ------------------- IMAGENES PUBLICACIONES -------------------
+
+$img1 : url("../assets/img/cieloPeligroso.jpg");
+$img2 : url("../assets/img/mama.jpg");
+$img3 : url("../assets/img/laPlata.jpg");
+$img4 : url("../assets/img/mantis.jpg");
+$img5 : url("../assets/img/fantasía.jpg");
+$img6 : url("../assets/img/Excidio.jpg");
+$img7 : url("../assets/img/paladin.jpg");
+$img8 : url("../assets/img/aparato.jpg");
+
+
+// 
+
+%fondoTitulos{ 
+  
+  background-size: cover;
+  
+  
+ h1{     
+  position:relative;
+  z-index: 10000;
+  background-color: rgba(255,255,255,0.3);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.18);      
+  font-family: map-get($map: $fontFamily, $key: special );
+  text-align:center;
+  padding: 10vh;
+  
+  text-shadow: 0.2em 0.2em 0.5em whitesmoke;
+  @media screen and (min-width: $bp-med-s){
+      margin-bottom: 5vh;;
+      background-color: rgba(255,255,255,0.3);
+      box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+      backdrop-filter: blur(2px);
+      border: 1px solid rgba(255,255,255,0.18);
+  }
+
+ }
+}

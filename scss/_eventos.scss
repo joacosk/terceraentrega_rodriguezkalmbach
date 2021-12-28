@@ -1,10 +1,13 @@
 
 
-main{
-    h1{
-        font-family: map-get($map: $fontFamily, $key: titulo );
-        text-align:center;
+.mainEventos{
+    background-image: url("/assets/img/Fondo_main_compu4.jpg");
+    background-size:contain;
+
     
+    .tituloEvento{ 
+        @extend %fondoTitulos;
+        background-image:url("/assets/img/eventos2.jpg");
     }
 
     h2, 
@@ -23,49 +26,83 @@ main{
         text-align: center;
 
         @media screen and (min-width: $bp-med-s){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+            align-items: start;
         }
         
                         
-        @media screen and (min-width: $bp-xl){
-            
-        }
-        .eventos_descripcion{
 
-            width: 100vw;
-            .barra {
-            content: '';
-            background-color: rgb(26,63,79);
-            width: 100%;
-            height: 2.5px;
-            border-radius: 1000px;
-            margin-bottom: 20px;
-            }
+        .eventos_descripcion{
+            width: 25rem;
+            height: auto;            
+ 
+            
+            .eventos_descripcion__tarjeta{
+
+                background-color: rgba(255,255,255,0.3);
+                box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+                backdrop-filter: blur(2px);
+                border: 1px solid rgba(255,255,255,0.18);
+                margin: 0.5rem 0;
+
+                .tarjeta__fecha{
+                margin-top: 0.5rem;
+                }
+
+                .tarjeta__titulo{
+                    width: 100%;
+                }
+
+                p{
+                    font-family: map-get($map: $fontFamily, $key: text );
+                    display: none;
+                    font-size: $font-texto-size-m;
+                    @media screen and (min-width: $bp-med-s){
+                        display:inline-block;
+                        text-align: center;
+                        font-size: $font-texto-size-l;
+                    
+                    }
+        
+                }
+                @media screen and (min-width: $bp-med-s){
+                    width: auto;
+                    max-width: 50vw;
+                    height: auto;
+                    border-radius: 1rem;
+                }
+        }
+    
+            
         }
 
         .eventos__tarjeta{
             display: flex;
             flex-direction: column;
             width: 25rem;
-            border: solid white 1px;
-            border-radius: 0.3rem;
-            background-color: #468AA5;
+            border: transparent 1px;
+            border-radius: 0.8rem;
             align-items: center;
             margin: 0.5rem 0;
-            padding: 1rem 0;
+            padding: 0 0;
 
-            .tarjeta__fecha{
-                margin-top: 0.5rem;
-            }
+            min-width: 45vw;
+
             img{
-               width: 60% ;
-               height: auto;
-               box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-            }
-
-            .tarjeta__titulo{
-                width: 60%;
+                width: 60% ;
+                height: auto;
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+                border-radius: 0.8rem;
+             }
+             @media screen and (min-width: $bp-med-s){
+        
+                justify-self: center;
+        
             }
         }
 
     }
+    
 }
